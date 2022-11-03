@@ -1,12 +1,15 @@
 #include <iostream>
 using std::cout;
+using std::hex;
 int main()
 {
-    int x, quantity;
-    float price;
-    x=-52;
-    quantity=10;
-    price=27.31;
-    cout<<"x = "<<x<<" quantity = "<<quantity<<" price = "<<price<<'\n';
+    int a = 5, b = 0, x = 6, y;
+    y = (a || b && x--) || (!a || !a || x++);
+    cout << "y = " << y << " x = " << x << '\n';
+    y = (y || a && x++) && (!y || x--);
+    cout << "y = " << y << " x = " << x << '\n';
+    y = !a && b && (!x-- || !b) && !x++;
+    cout << "y = " << y << " x = " << x << '\n';
+
     return 0;
 }
